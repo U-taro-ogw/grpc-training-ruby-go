@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package training;
+
+service Training {
+  rpc SampleGoApi(Empty) returns (SampleGoApiInfo) {}
+}
+
+message Empty {}
+
+message SampleGoApiInfo {
+  string language = 1;
+}
