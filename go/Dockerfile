@@ -16,5 +16,5 @@ WORKDIR /go/src/github.com/U-taro-ogw/grpc-training-ruby-go
 
 #RUN apk add --no-cache alpine-sdk git && go get -u github.com/oxequa/realize
 
-#EXPOSE 8083
+EXPOSE 8083
 #CMD ["realize", "start"]

@@ -3,11 +3,11 @@ syntax = "proto3";
 package training;
 
 service Training {
-  rpc SampleGoApi(Empty) returns (SampleGoApiInfo) {}
+  rpc Hoge(Empty) returns (HogeResponse) {}
 }
 
 message Empty {}
 
-message SampleGoApiInfo {
+message HogeResponse {
   string language = 1;
 }
