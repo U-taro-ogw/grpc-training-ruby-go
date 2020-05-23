@@ -25,7 +25,7 @@ type server struct {}
 
 func (s *server) Hoge(ctx context.Context, req *training.Empty) (*training.HogeResponse, error) {
 	hogeResponse := &training.HogeResponse{
-		language: "Golang",
+		Language: "Golang",
 	}
 	return hogeResponse, nil
 }

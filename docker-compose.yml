@@ -3,7 +3,7 @@ services:
   go_api:
     build: ./go
     volumes:
-      - ./go:/go/src/github.com/U-taro-ogw/grpc-training-ruby-go
+      - ./go:/go/src/grpc-training-ruby-go
       - ./proto:/grpc/proto
     ports:
       - "8083:8083"
