@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/U-taro-ogw/grpc-training-ruby-go/go/lib"
+	pd "github.com/U-taro-ogw/grpc-training-ruby-go/go/lib"
 	"google.golang.org/grpc"
 )
 
@@ -16,15 +16,15 @@ func main() {
 		return
 	}
 	grpcServer := grpc.NewServer()
-	training.RegisterTrainingServer(grpcServer, &server{})
+	pd.RegisterTrainingServer(grpcServer, &server{})
 	log.Printf("==========>>>>>>>>>> training server is running!")
 	grpcServer.Serve(listener)
 }
 
 type server struct {}
 
-func (s *server) Hoge(ctx context.Context, req *training.Empty) (*training.HogeResponse, error) {
-	hogeResponse := &training.HogeResponse{
+func (s *server) Hoge(ctx context.Context, req *pd.Empty) (*pd.HogeResponse, error) {
+	hogeResponse := &pd.HogeResponse{
 		Language: "Golang",
 	}
 	return hogeResponse, nil
